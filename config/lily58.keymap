@@ -64,11 +64,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans      &kp EXCL        &trans      &kp HASH        &trans  &trans                         &trans                &trans                 &trans            &trans             &trans         &trans
-&trans  &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                      &kt CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                       &kp LEFT              &kp DOWN                 &kp UP         &kp RIGHT   &kp SINGLE_QUOTE      &kp GRAVE
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans  &kp AMPERSAND             &kp MINUS               &kp PLUS          &kp STAR          &kp SLASH    &kp PERCENT
-                                          &trans        &trans  &trans  &trans  &trans         &trans                &trans                 &trans
+&trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR        &trans                         &trans                &trans                 &trans            &trans             &trans         &trans
+&trans        &trans        &trans        &trans        &trans        &trans                      &kt CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                       &kp LEFT              &kp DOWN                 &kp UP         &kp RIGHT   &kp SINGLE_QUOTE      &kp GRAVE
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &kp AMPERSAND             &kp MINUS               &kp PLUS          &kp STAR          &kp SLASH    &kp PERCENT
+                                          &trans        &trans        &trans  &trans  &trans         &trans                &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
