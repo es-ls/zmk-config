@@ -59,11 +59,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET   &kp AMPERSAND         &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &kp DEL
-   &trans    &trans  &trans    &trans      &trans       &trans                     &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
-   &trans    &trans  &trans    &trans      &trans       &trans                     &trans       &kp UNDER        &kp EQUAL         &kp BACKSLASH              &kp COLON             &trans
-   &trans    &trans  &trans    &trans      &trans       &trans  &trans  &trans     &trans       &kp MINUS         &kp PLUS         &kp LESS_THAN       &kp GREATER_THAN       &kp QUESTION
-                               &trans      &trans       &trans  &trans  &trans     &trans          &trans           &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp CARET   &kp AMPERSAND         &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &kp DEL
+   &trans    &trans  &trans    &trans      &trans       &trans                         &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
+   &trans    &trans  &trans    &trans      &trans       &trans                  &kp BACKSLASH       &kp UNDER        &kp EQUAL              &kp PIPE              &kp COLON             &trans
+   &trans    &trans  &trans    &trans      &trans       &trans  &trans  &trans         &trans       &kp MINUS         &kp PLUS         &kp LESS_THAN       &kp GREATER_THAN       &kp QUESTION
+                               &trans      &trans       &trans  &trans  &trans         &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
