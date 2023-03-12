@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "mo_kp";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings =
                 <&mo>,
@@ -40,11 +40,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                   &kp N6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &trans
-  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                    &kp Y          &kp U         &kp I         &kp O         &kp P  &kp SINGLE_QUOTE
-&kp LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                    &kp H          &kp J         &kp K         &kp L      &kp SEMI         &kp ENTER
-&kp GRAVE         &kp Z         &kp X         &kp B         &kp C         &kp V  &trans           &kp B        &kp COMMA          &kp N         &kp M       &kp DOT      &kp FSLH     &kp BACKSPACE
-                                           &kp LGUI      &kp LALT    &sk LSHIFT   &sl 1  &mo_kp 2 SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT      &kp RALT
+   &trans  &trans  &trans    &trans    &trans      &trans                                   &trans         &trans         &trans   &trans    &trans            &trans
+  &kp TAB   &kp Q   &kp W     &kp E     &kp R       &kp T                                    &kp Y          &kp U          &kp I    &kp O     &kp P  &kp SINGLE_QUOTE
+&kp LCTRL   &kp A   &kp S     &kp D     &kp F       &kp G                                    &kp H          &kp J          &kp K    &kp L  &kp SEMI         &kp ENTER
+&kp GRAVE   &kp Z   &kp X     &kp B     &kp C       &kp V  &trans           &kp B        &kp COMMA          &kp N          &kp M  &kp DOT  &kp FSLH     &kp BACKSPACE
+                           &kp LGUI  &kp LALT  &sk LSHIFT   &sl 1  &mo_kp 2 SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -59,11 +59,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans           &trans        &trans        &trans        &trans        &trans                        &trans         &trans        &trans                &trans                 &trans         &trans
-&trans  &kp EXCLAMATION        &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT                     &kp CARET  &kp AMPERSAND      &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0        &kp ESC
-&trans           &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans      &kp MINUS     &kp EQUAL      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp DEL
-                                             &trans        &trans        &trans  &trans  &trans        &trans         &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans            &trans             &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0  &kp BACKSLASH
+&trans        &trans        &trans        &trans        &trans        &trans                        &trans     &kp MINUS     &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp ESC
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans            &trans             &trans        &kp DEL
+                                          &trans        &trans        &trans  &trans  &trans        &trans        &trans    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
