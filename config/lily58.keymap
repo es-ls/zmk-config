@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "mo_kp";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             bindings =
                 <&mo>,
@@ -60,11 +60,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET         &kp AMPERSAND               &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &kp DEL
-   &trans    &trans  &trans    &trans      &trans       &trans                     &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET          &kp UNDER
-   &trans    &trans  &trans    &trans      &trans       &trans                     &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE              &kp PIPE              &kp COLON  &kp DOUBLE_QUOTES
-   &trans    &trans  &trans    &trans      &trans       &trans  &trans  &trans     &trans         &kp BACKSLASH          &kp LESS_THAN      &kp GREATER_THAN           &kp QUESTION           &kp PLUS
-                               &trans      &trans       &trans  &trans  &trans     &trans                &trans                 &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH     &kp DOLLAR    &kp PERCENT                  &kp CARET         &kp AMPERSAND               &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &kp DEL
+   &trans    &trans  &trans    &trans         &trans         &trans                     &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET          &kp UNDER
+   &trans    &trans  &trans    &trans  &kp LC(LS(C))  &kp LC(LS(V))                     &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE              &kp PIPE              &kp COLON  &kp DOUBLE_QUOTES
+   &trans    &trans  &trans    &trans      &kp LC(C)      &kp LC(V)  &trans  &trans     &trans         &kp BACKSLASH          &kp LESS_THAN      &kp GREATER_THAN           &kp QUESTION           &kp PLUS
+                               &trans         &trans         &trans  &trans  &trans     &trans                &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -79,11 +79,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-   &kp F12            &kp F1        &kp F2        &kp F3         &kp F4         &kp F5                    &kp F6         &kp F7        &kp F8           &kp F9           &kp F10  &kp F11
-    &trans  &kp LG(NUMBER_1)    &kp LG(N2)    &kp LG(N3)     &kp LG(N4)     &kp LG(N5)                  &kp HOME  &kp PAGE_DOWN     &kp PG_UP          &kp END  &kp LG(NUMBER_0)   &trans
-    &trans            &trans        &trans        &trans  &kp LC(LS(C))  &kp LC(LS(V))                  &kp LEFT       &kp DOWN        &kp UP        &kp RIGHT         &kp ENTER   &trans
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &kp LC(C)      &kp LC(V)  &trans  &trans    &trans     &kp K_MUTE  &kp K_VOL_DN  &kp K_VOLUME_UP            &trans   &trans
-                                                  &trans         &trans         &trans  &trans  &trans    &trans         &trans        &trans
+   &kp F12            &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6         &kp F7        &kp F8           &kp F9           &kp F10  &kp F11
+    &trans  &kp LG(NUMBER_1)    &kp LG(N2)    &kp LG(N3)    &kp LG(N4)    &kp LG(N5)                  &kp HOME  &kp PAGE_DOWN     &kp PG_UP          &kp END  &kp LG(NUMBER_0)   &trans
+    &trans            &trans        &trans        &trans        &trans        &trans                  &kp LEFT       &kp DOWN        &kp UP        &kp RIGHT         &kp ENTER   &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans    &trans     &kp K_MUTE  &kp K_VOL_DN  &kp K_VOLUME_UP            &trans   &trans
+                                                  &trans        &trans        &trans  &trans  &trans    &trans         &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
