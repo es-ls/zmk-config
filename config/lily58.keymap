@@ -42,9 +42,9 @@
 
             bindings = <
    &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                            &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &kp BACKSPACE
-   &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                   &kp Y          &kp U         &kp I         &kp O         &kp P  &kp SINGLE_QUOTE
- &kp LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                   &kp H          &kp J         &kp K         &kp L      &kp SEMI         &kp ENTER
-&kp LSHIFT         &kp Z         &kp X         &kp B         &kp C         &kp V  &kp B           &kp B            &kp N          &kp M     &kp COMMA       &kp DOT     &kp SLASH   &kp RIGHT_SHIFT
+   &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                   &kp Y          &kp U         &kp I         &kp O         &kp P         &kp MINUS
+ &kp LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                   &kp H          &kp J         &kp K         &kp L      &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHIFT         &kp Z         &kp X         &kp B         &kp C         &kp V  &kp B           &kp B            &kp N          &kp M     &kp COMMA       &kp DOT     &kp SLASH         &kp EQUAL
                                               &trans      &kp LGUI      &kp LALT  &sl 1  &mo_kp 2 SPACE  &sk RIGHT_SHIFT  &kp RIGHT_ALT        &trans
             >;
 
