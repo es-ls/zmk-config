@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     &sk {
@@ -48,11 +49,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0         &kp MINUS
-  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                              &kp Y         &kp U         &kp I         &kp O         &kp P         &kp EQUAL
-&sk LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                              &kp H         &kp J         &kp K         &kp L      &kp SEMI  &kp SINGLE_QUOTE
-    &sl 2         &kp Z         &kp X         &kp C         &kp V         &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp N         &kp M     &kp COMMA       &kp DOT     &kp SLASH     &kp BACKSLASH
-                                           &kp LGUI      &sk LALT    &sk LSHIFT             &sl 1              &sl 2     &kp SPACE      &sk RALT      &kp RGUI
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                       &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0         &kp MINUS
+  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                              &kp Y         &kp U               &kp I         &kp O         &kp P         &kp EQUAL
+&sk LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                              &kp H         &kp J               &kp K         &kp L      &kp SEMI  &kp SINGLE_QUOTE
+    &sl 2         &kp Z         &kp X         &kp C         &kp V         &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp N         &kp M           &kp COMMA       &kp DOT     &kp SLASH     &kp BACKSLASH
+                                           &kp LGUI      &sk LALT    &sk LSHIFT             &sl 1              &sl 2     &kp SPACE      &sk RALT  &kp K_CONTEXT_MENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -67,11 +68,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12     &kp F1     &kp F2          &kp F3                &kp F4            &kp F5                             &kp F6                 &kp F7           &kp F8            &kp F9       &kp F10            &kp F11
- &trans     &trans     &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET                  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE     &kp BACKSLASH      &kp PIPE          &kp UNDER
- &trans  &kp GRAVE     &trans   &kp LC(LS(C))         &kp LC(LS(V))            &trans                           &kp LEFT               &kp DOWN           &kp UP         &kp RIGHT     &kp COLON  &kp DOUBLE_QUOTES
- &trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)             &kp LC(V)            &trans  &trans  &trans             &trans                 &trans    &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION           &kp PLUS
-                                       &trans                &trans            &trans  &trans  &trans             &trans                 &trans           &trans
+&none       &none  &none  &none  &none  &none                       &none         &none         &none         &none  &none  &none
+&none       &none  &none  &none  &none  &none                       &none         &none  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
+&none  &bt BT_CLR  &none  &none  &none  &none                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
+&none       &none  &none  &none  &none  &none  &none  &none         &none    &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
+                          &none  &none  &none  &none  &none         &none         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -87,7 +88,7 @@
 
             bindings = <
 &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)  &none
-&none         &kp LG(Q)         &kp LG(W)         &kp LG(E)         &kp LG(R)         &kp LG(T)                           &none             &none             &none           &kp DEL     &kp BACKSPACE  &none
+&none         &kp LG(Q)         &kp LG(W)         &kp LG(E)         &kp LG(R)         &kp LG(T)                       &kp LC(U)             &none             &none           &kp DEL     &kp BACKSPACE  &none
 &none           &kp ESC         &kp LG(D)             &none             &none             &none                        &kp LEFT          &kp DOWN            &kp UP         &kp RIGHT         &kp ENTER  &none
 &none         &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)     &kp LC(LS(V))  &none  &none          &kp HOME     &kp PAGE_DOWN       &kp PAGE_UP           &kp END             &none  &none
                                                       &none             &none             &none  &none  &none             &none             &none             &none
