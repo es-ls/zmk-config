@@ -14,22 +14,22 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <26 27>;
+            key-positions = <26 25>;
         };
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <32 33>;
+            key-positions = <33 34>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <31 32>;
+            key-positions = <20 21>;
         };
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
         };
     };
 
@@ -82,7 +82,7 @@
             bindings = <
 &kp TILDE   &kp EXCL     &kp AT        &kp HASH            &kp DOLLAR       &kp PERCENT                          &kp CARET          &kp AMPERSAND         &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &kp DEL
    &trans     &trans     &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET                  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE         &kp BACKSLASH               &kp PIPE          &kp UNDER
-   &trans     &trans     &trans   &kp LC(LS(C))         &kp LC(LS(V))            &trans                           &kp LEFT               &kp DOWN           &kp UP             &kp RIGHT              &kp COLON  &kp DOUBLE_QUOTES
+   &trans  &kp GRAVE     &trans   &kp LC(LS(C))         &kp LC(LS(V))            &trans                           &kp LEFT               &kp DOWN           &kp UP             &kp RIGHT              &kp COLON  &kp DOUBLE_QUOTES
    &trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)             &kp LC(V)            &trans  &trans  &trans             &trans                 &trans    &kp LESS_THAN      &kp GREATER_THAN           &kp QUESTION           &kp PLUS
                                          &trans                &trans            &trans  &trans  &trans             &trans                 &trans           &trans
             >;
