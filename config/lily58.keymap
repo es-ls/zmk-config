@@ -24,7 +24,7 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
         };
 
         delete {
