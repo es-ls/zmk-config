@@ -9,6 +9,14 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    &sk {
+        release-after-ms = <100>;
+    };
+
+    &sl {
+        release-after-ms = <100>;
+    };
+
     combos {
         compatible = "zmk,combos";
     };
