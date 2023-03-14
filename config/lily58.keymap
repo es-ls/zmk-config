@@ -41,13 +41,6 @@
         compatible = "zmk,keymap";
 
         default {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                       &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0         &kp MINUS
   &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                              &kp Y         &kp U               &kp I         &kp O         &kp P         &kp EQUAL
@@ -60,17 +53,10 @@
         };
 
         specialchar {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
             bindings = <
 &none       &none  &none  &none  &none  &none                       &none                   &none         &none         &none  &none  &none
-&none       &none  &none  &none  &none  &none                       &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
 &none  &bt BT_CLR  &none  &none  &none  &none                &bt BT_SEL 0            &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
+&none       &none  &none  &none  &none  &none                       &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
 &none       &none  &none  &none  &none  &none  &none  &none         &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
                           &none  &none  &none  &none  &none         &none                   &none         &none
             >;
@@ -79,13 +65,6 @@
         };
 
         navigation {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
             bindings = <
 &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)  &none
 &none         &kp LG(Q)         &kp LG(W)         &kp LG(E)         &kp LG(R)         &kp LG(T)                       &kp LC(U)             &none             &none           &kp DEL     &kp BACKSPACE  &none
