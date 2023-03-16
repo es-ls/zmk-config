@@ -35,7 +35,9 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
+            bindings =
+                <&mo>,
+                <&kp>;
         };
         tk_hl: behavior_tk_hl_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
@@ -43,7 +45,9 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
+            bindings =
+                <&mo>,
+                <&kp>;
         };
         hk_tk: behavior_hk_kt_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
@@ -51,7 +55,9 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 
@@ -60,11 +66,11 @@
 
         default {
             bindings = <
- &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5                                          &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &kp MINUS
-   &kp TAB         &kp Q         &kp W         &kp E         &kp R              &kp T                                                 &kp Y         &kp U               &kp I         &kp O         &kp P      &kp EQUAL
- &sk LCTRL         &kp A         &kp S         &kp D         &kp F              &kp G                                                 &kp H         &kp J               &kp K         &kp L      &kp SEMI        &kp SQT
-&kp LSHIFT         &kp Z         &kp X         &kp C         &kp V              &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET            &kp N         &kp M           &kp COMMA       &kp DOT     &kp SLASH  &kp BACKSLASH
-                                            &kp LGUI      &sk LALT &hl_tk SHIFTED ESC           &kp DEL      &kp BACKSPACE &tk_hl NAV SPACE      &sk RALT  &kp K_CONTEXT_MENU
+ &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &kp MINUS
+   &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                                &kp Y         &kp U               &kp I         &kp O         &kp P      &kp EQUAL
+ &sk LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                                &kp H         &kp J               &kp K         &kp L      &kp SEMI        &kp SQT
+&kp LSHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET           &kp N         &kp M           &kp COMMA       &kp DOT     &kp SLASH  &kp BACKSLASH
+                                            &kp LGUI      &sk LALT  &hl_tk 1 ESC          &kp LGUI      &kp BACKSPACE  &tk_hl 2 SPACE      &sk RALT  &kp K_CONTEXT_MENU
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -72,11 +78,11 @@
 
         shifted {
             bindings = <
- &kp TILDE     &kp EXCL        &kp AT   &kp HASH     &kp DOLLAR      &kp PERCENT                                          &kp CARET &kp AMPERSAND    &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp UNDER
-    &trans    &kp LS(Q)     &kp LS(W)  &kp LS(E)      &kp LS(R)        &kp LS(T)                                          &kp LS(Y)     &kp LS(U)   &kp LS(I)             &kp LS(O)              &kp LS(P)   &kp  PLUS
-    &trans    &kp LS(A)     &kp LS(S)  &kp LS(D)      &kp LS(F)        &kp LS(G)                                          &kp LS(H)     &kp LS(J)   &kp LS(K)             &kp LS(L)              &kp COLON     &kp DQT
-    &trans    &kp LS(Z)     &kp LS(X)  &kp LS(C)      &kp LS(V)        &kp LS(B) &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp LS(N)     &kp LS(M)      &kp LT                &kp GT           &kp QUESTION    &kp PIPE
-                                          &trans         &trans            &mo 1           &trans             &trans  &kp LS(SPACE)        &trans      &trans
+&kp TILDE   &kp EXCL     &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                                           &kp CARET  &kp AMPERSAND   &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER
+   &trans  &kp LS(Q)  &kp LS(W)  &kp LS(E)   &kp LS(R)    &kp LS(T)                                           &kp LS(Y)      &kp LS(U)  &kp LS(I)             &kp LS(O)              &kp LS(P)   &kp PLUS
+   &trans  &kp LS(A)  &kp LS(S)  &kp LS(D)   &kp LS(F)    &kp LS(G)                                           &kp LS(H)      &kp LS(J)  &kp LS(K)             &kp LS(L)              &kp COLON    &kp DQT
+   &trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)   &kp LS(V)    &kp LS(B)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp LS(N)      &kp LS(M)     &kp LT                &kp GT           &kp QUESTION   &kp PIPE
+                                    &trans      &trans        &mo 1            &trans             &trans  &kp LS(SPACE)         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,11 +102,11 @@
 
         function {
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                       &none                   &none         &none         &none  &none  &none
-     &none          &none         &none         &none         &none  &none                       &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
-     &none          &none         &none         &none         &none  &none                       &none                   &none         &none         &none  &none  &none
-     &none          &none         &none         &none         &none  &none  &none  &none         &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
-                           &none  &none  &none  &none  &none         &none                   &none         &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none                   &none         &none         &none  &none  &none
+     &none         &none         &none         &none         &none  &none                &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
+     &none         &none         &none         &none         &none  &none                &none                   &none         &none         &none  &none  &none
+     &none         &none         &none         &none         &none  &none  &none  &none  &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
+                                               &none         &none  &none  &none  &none  &none                   &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
