@@ -22,15 +22,17 @@
 
 / {
     combos {
-        compatible = "zmk,combos";
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <34 33>;
-        };
     };
 
     macros {
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
     };
 
     behaviors {
@@ -49,9 +51,19 @@
             label = "tk_hl";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings =
                 <&mo>,
+                <&kp>;
+        };
+        tk_hk: behavior_tk_hk_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "tk_hk";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            bindings =
+                <&kp>,
                 <&kp>;
         };
         hk_tk: behavior_hk_kt_tap_preferred {
@@ -60,9 +72,14 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
+        };
+        backdel: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -71,11 +88,11 @@
 
         default {
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &kp MINUS
-  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                                &kp Y         &kp U         &kp I         &kp O         &kp P      &kp EQUAL
-&sk LCTRL         &kp A         &kp S         &kp D         &kp F         &kp G                                                &kp H         &kp J         &kp K         &kp L      &kp SEMI        &kp SQT
-    &mo 3         &kp Z         &kp X         &kp C         &kp V         &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET           &kp N         &kp M     &kp COMMA       &kp DOT     &kp SLASH  &kp BACKSLASH
-                                           &kp LGUI      &sk LALT  &hl_tk 1 ESC         &kp ENTER      &kp BACKSPACE  &tk_hl 2 SPACE      &sk RALT     &kp K_APP
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4     &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &kp MINUS
+  &kp TAB         &kp Q         &kp W         &kp E         &kp R            &kp T                                                &kp Y         &kp U         &kp I         &kp O         &kp P      &kp EQUAL
+&sk LCTRL         &kp A         &kp S         &kp D         &kp F            &kp G                                                &kp H         &kp J         &kp K         &kp L      &kp SEMI        &kp SQT
+    &mo 2         &kp Z         &kp X         &kp C         &kp V            &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET           &kp N         &kp M     &kp COMMA       &kp DOT     &kp SLASH  &kp BACKSLASH
+                                           &kp LGUI      &sk LALT     &tk_hl 1 ESC     &kp BACKSPACE          &kp ENTER  &tk_hl 1 SPACE      &sk RALT     &kp K_APP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -87,7 +104,7 @@
    &trans  &kp LS(Q)  &kp LS(W)  &kp LS(E)   &kp LS(R)    &kp LS(T)                                           &kp LS(Y)      &kp LS(U)  &kp LS(I)             &kp LS(O)              &kp LS(P)   &kp PLUS
    &trans  &kp LS(A)  &kp LS(S)  &kp LS(D)   &kp LS(F)    &kp LS(G)                                           &kp LS(H)      &kp LS(J)  &kp LS(K)             &kp LS(L)              &kp COLON    &kp DQT
    &trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)   &kp LS(V)    &kp LS(B)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp LS(N)      &kp LS(M)     &kp LT                &kp GT           &kp QUESTION   &kp PIPE
-                                    &trans      &trans        &mo 1            &trans            &kp DEL  &kp LS(SPACE)         &trans     &trans
+                                    &trans      &trans       &trans           &kp DEL             &trans  &kp LS(SPACE)         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -95,11 +112,11 @@
 
         navigation {
             bindings = <
-&none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                  &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)  &none
-&none         &kp LG(Q)         &kp LG(W)         &kp LG(E)         &kp LG(R)         &kp LG(T)                         &kp LC(U)             &none             &none             &none             &none  &none
-&none           &kp ESC         &kp LG(D)             &none             &none             &none                          &kp LEFT          &kp DOWN            &kp UP         &kp RIGHT             &none  &none
-&none         &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)     &kp LC(LS(V))   &none   &none          &kp HOME     &kp PAGE_DOWN       &kp PAGE_UP           &kp END             &none  &none
-                                                      &none             &none             &none  &trans  &trans             &mo 2             &none             &none
+ &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                  &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)  &none
+ &none         &kp LG(Q)         &kp LG(W)         &kp LG(E)         &kp LG(R)         &kp LG(T)                         &kp LC(U)             &none             &none             &none             &none  &none
+ &none           &kp ESC         &kp LG(D)             &none             &none             &none                          &kp LEFT          &kp DOWN            &kp UP         &kp RIGHT             &none  &none
+&trans         &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)     &kp LC(LS(V))   &none   &none          &kp HOME     &kp PAGE_DOWN       &kp PAGE_UP           &kp END             &none  &none
+                                                     &trans            &trans            &trans  &trans  &trans            &trans            &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -110,8 +127,8 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none                   &none         &none         &none  &none  &none
      &none         &none         &none         &none         &none  &none                &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
      &none         &none         &none         &none         &none  &none                &none                   &none         &none         &none  &none  &none
-     &none         &none         &none         &none         &none  &none  &none  &none  &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
-                                               &none         &none  &none  &none  &none  &none                   &none         &none
+    &trans         &none         &none         &none         &none  &none  &none  &none  &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
+                                              &trans        &trans &trans &trans &trans &trans                  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
