@@ -87,15 +87,6 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        hl_backdel: hl_backdel {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HL_BACKDEL";
-            bindings =
-                <&mo>,
-                <&backdel>;
-
-            #binding-cells = <2>;
-        };
     };
 
     keymap {
