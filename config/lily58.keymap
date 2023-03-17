@@ -102,7 +102,7 @@
   &kp TAB         &kp Q         &kp W         &kp E         &kp R               &kp T                                                    &kp Y                  &kp U         &kp I         &kp O         &kp P      &kp EQUAL
  &kp LGUI         &kp A         &kp S         &kp D         &kp F               &kp G                                                    &kp H                  &kp J         &kp K         &kp L      &kp SEMI        &kp SQT
     &mo 2         &kp Z         &kp X         &kp C         &kp V               &kp B  &kp LEFT_BRACKET        &kp RIGHT_BRACKET         &kp N                  &kp M     &kp COMMA       &kp DOT     &kp SLASH  &kp BACKSLASH
-                                              &mo 2      &sk LALT  &hk_tk LCTRL ENTER      &hl_tk 1 ESC  &hk_tk LSHIFT BACKSPACE     &kp SPACE  &hk_tk RALT LS(SPACE)     &kp K_APP
+                                           &kp LGUI      &sk LALT  &hk_tk LCTRL ENTER      &hl_tk 1 ESC  &hk_tk LSHIFT BACKSPACE     &kp SPACE  &hk_tk RALT LS(SPACE)     &kp K_APP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
