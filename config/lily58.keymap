@@ -106,6 +106,7 @@
                 <&backdel>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
         hl_tl: hl_tl {
             compatible = "zmk,behavior-hold-tap";
@@ -115,6 +116,7 @@
                 <&lt>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
