@@ -114,7 +114,7 @@
             label = "HL_TTL";
             bindings =
                 <&mo>,
-                <&tog>;
+                <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -170,7 +170,7 @@
      &none         &none         &none         &none         &none   &none                   &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
      &none         &none         &none         &none         &none   &none                   &none                   &none         &none         &none  &none  &none
     &trans         &none         &none         &none         &none   &none   &none   &none   &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
-                                              &trans        &trans  &trans  &trans  &trans  &trans                  &tog 3        &trans
+                                              &trans        &trans  &trans  &trans  &trans  &trans                   &to 3        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
