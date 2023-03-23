@@ -123,6 +123,11 @@
 
     combos {
         compatible = "zmk,combos";
+
+        new_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <33 34>;
+        };
     };
 
     keymap {
