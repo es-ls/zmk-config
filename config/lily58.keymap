@@ -131,7 +131,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             hold-trigger-key-positions = <6 18 31 30 44 43 54 55 56 45 46 57 47 48 49 35 23 11 9 34 22 10 21 32 33 20 8 7 19>;
-            flavor = "tab-preferred";
+            flavor = "tap-preferred";
         };
         rh_pht: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -143,7 +143,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-            flavor = "tab-preferred";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
         };
     };
@@ -159,7 +159,7 @@
             bindings = <
 &kp GRAVE     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                                        &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9        &kp NUMBER_0      &kp EQUAL
   &kp TAB            &kp Q           &kp W           &kp E             &kp R             &kp T                                               &kp Y             &kp U           &kp I           &kp O               &kp P      &kp MINUS
-&kp LCTRL  &lh_pht LCTRL A  &lh_pht LGUI S  &lh_pht LALT D  &lh_pht LSHIFT F             &kp G                                               &kp H  &rh_pht RSHIFT J  &rh_pht RALT K  &rh_pht RGUI L  &rh_pht RCTRL SEMI        &kp SQT
+&kp LCTRL            &kp A           &kp S           &kp D             &kp F             &kp G                                               &kp H             &kp J           &kp K           &kp L            &kp SEMI        &kp SQT
 &kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET         &kp N             &kp M       &kp COMMA         &kp DOT           &kp SLASH  &kp BACKSLASH
                                                      &mo 1          &kp LGUI  &hk_qtk LALT ESC         &sk LSHFT  &hk_qtk RALT ENTER     &kp SPACE          &backdel           &mo 2
             >;
