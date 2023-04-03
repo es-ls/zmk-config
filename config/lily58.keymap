@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define SHIFTED 1
-#define NAV 2
+#define NAV 1
+#define SPECIAL 2
 
 &sk {
     release-after-ms = <100>;
@@ -38,16 +38,6 @@
     };
 
     behaviors {
-        hl_tk: behavior_hl_tk_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mo_kp";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings =
-                <&mo>,
-                <&kp>;
-        };
         tk_hl: behavior_tk_hl_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "tk_hl";
@@ -91,13 +81,11 @@
         hk_qtk: hk_qtk {
             compatible = "zmk,behavior-hold-tap";
             label = "HK_QTK";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <270>;
+            flavor = "tap-preferred";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
         };
         hshift_tbsdel: hshift_tbsdel {
             compatible = "zmk,behavior-hold-tap";
@@ -106,6 +94,7 @@
                 <&kp>,
                 <&backdel>;
 
+            flavor = "tap-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <270>;
@@ -113,38 +102,30 @@
         hl_ttl: hl_ttl {
             compatible = "zmk,behavior-hold-tap";
             label = "HL_TTL";
-            bindings =
-                <&mo>,
-                <&tog>;
-
-            #binding-cells = <2>;
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&tog>;
         };
-        lh_pht: left_hand_positional_hold_tap {
+        hrm: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <270>;
             /* hold-trigger-key-positions = <6 18 31 30 44 43 54 55 56 45 46 57 47 48 49 35 23 11 9 34 22 10 21 32 33 20 8 7 19>; */
-            flavor = "tap-preferred";
-        };
-        rh_pht: right_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
             /* hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>; */
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+        hltk: homerow_layers {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS";
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <270>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -157,11 +138,11 @@
 
         default {
             bindings = <
-&kp GRAVE     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                                        &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9        &kp NUMBER_0      &kp EQUAL
-  &kp TAB  &lh_pht LCTRL Q  &lh_pht LGUI W  &lh_pht LALT E  &lh_pht LSHIFT R             &kp T                                               &kp Y  &rh_pht RSHIFT U  &rh_pht LALT I  &rh_pht RGUI O     &rh_pht RCTRL P      &kp MINUS
-&kp LCTRL            &kp A           &kp S           &kp D             &kp F             &kp G                                               &kp H             &kp J           &kp K           &kp L            &kp SEMI        &kp SQT
-&kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET         &kp N             &kp M       &kp COMMA         &kp DOT           &kp SLASH  &kp BACKSLASH
-                                                     &mo 1          &kp LGUI  &hk_qtk LALT ESC         &sk LSHFT  &hk_qtk RALT ENTER     &kp SPACE          &backdel           &mo 2
+&kp GRAVE     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                                             &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9   &kp NUMBER_0      &kp EQUAL
+  &kp TAB            &kp Q    &hrm LCTRL W     &hrm LALT E       &hrm LGUI R             &kp T                                                    &kp Y       &hrm RGUI U     &hrm LALT I    &hrm RCTRL O          &kp P      &kp MINUS
+&kp LCTRL        &hltk 1 A           &kp S           &kp D             &kp F             &kp G                                                    &kp H             &kp J           &kp K           &kp L       &kp SEMI        &kp SQT
+&kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET              &kp N             &kp M       &kp COMMA         &kp DOT      &kp SLASH  &kp BACKSLASH
+                                                     &mo 1          &kp RALT       &hltk 3 ESC         &sk LSHFT &hk_qtk RSHFT ENTER      &hltk 2 SPACE              &TAB           &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -169,11 +150,35 @@
 
         navigation {
             bindings = <
-&kp F12     &kp F1     &kp F2     &kp F3     &kp F4         &kp F5                     &kp F6         &kp F7       &kp F8     &kp F9  &kp F10  &kp F11
-  &none  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)      &kp LG(T)                  &kp LC(U)          &none        &none      &none    &none    &none
-  &none    &kp ESC  &kp LG(D)      &none      &none          &none                   &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT    &none    &none
- &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(V))   &none   &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END    &none    &none
-                                  &trans     &trans         &trans  &trans  &trans     &trans         &trans       &trans
+ &trans             &trans          &trans          &trans          &trans              &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
+&kp F12             &kp F1          &kp F2          &kp F3          &kp F4              &kp F5                                              &kp F6            &kp F7          &kp F8          &kp F9        &kp F10        &kp F11
+ &trans             &trans          &trans          &trans          &trans              &trans                                            &kp LEFT          &kp DOWN          &kp UP       &kp RIGHT         &trans         &trans
+ &trans             &trans          &trans          &trans          &trans              &trans           &trans               &trans      &kp HOME     &kp PAGE_DOWN     &kp PAGE_UP         &kp END         &trans         &trans
+                                                    &trans          &trans              &trans           &trans             &backdel        &trans            &trans          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        number {
+            bindings = <
+&trans             &trans          &trans          &trans          &trans            &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
+&trans             &kp N1   &hrm LCTRL N2    &hrm LALT N3    &hrm LGUI N4            &kp N5                                              &kp N6      &hrm RGUI N7    &hrm LALT N8   &hrm RCTRL N9         &kp N0      &kp EQUAL
+&trans             &trans          &trans          &trans          &trans            &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
+&trans             &trans          &trans          &trans          &trans            &trans            &trans              &trans        &trans            &trans          &trans          &trans         &trans         &trans
+                                                   &trans          &trans            &trans            &trans              &trans        &trans            &trans          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        symbol {
+            bindings = <
+&trans             &trans          &trans          &trans          &trans            &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
+&trans             &kp N1   &hrm LCTRL N2    &hrm LALT N3    &hrm LGUI N4            &kp N5                                              &kp N6      &hrm RGUI N7    &hrm LALT N8   &hrm RCTRL N9         &kp N0      &kp EQUAL
+&trans             &trans          &trans          &trans          &trans            &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
+&trans             &trans          &trans          &trans          &trans            &trans            &trans              &trans        &trans            &trans          &trans          &trans         &trans         &trans
+                                                   &trans          &trans            &trans            &trans              &trans        &trans            &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
