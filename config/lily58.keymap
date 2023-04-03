@@ -140,10 +140,10 @@
 
         default {
             bindings = <
-&kp GRAVE     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                                             &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9   &kp NUMBER_0      &kp EQUAL
-  &kp TAB            &kp Q    &hrm LCTRL W     &hrm LALT E       &hrm LGUI R             &kp T                                                    &kp Y       &hrm RGUI U     &hrm LALT I    &hrm RCTRL O          &kp P      &kp MINUS
-&kp LCTRL      &hltk NAV A           &kp S           &kp D       &hltk NAV F             &kp G                                                    &kp H             &kp J           &kp K           &kp L       &kp SEMI        &kp SQT
-&kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET              &kp N             &kp M       &kp COMMA         &kp DOT      &kp SLASH  &kp BACKSLASH
+&kp GRAVE     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                                             &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    &kp NUMBER_0      &kp EQUAL
+  &kp TAB            &kp Q           &kp W           &kp E             &kp R             &kp T                                                    &kp Y             &kp U           &kp I           &kp O           &kp P      &kp MINUS
+&kp LCTRL     &hrm LCTRL A     &hrm LALT S     &hrm LGUI D       &hltk NAV F             &kp G                                                    &kp H             &kp J     &hrm RGUI K    &hrm LALT  L &hrm RCTRL SEMI        &kp SQT
+&kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET              &kp N             &kp M       &kp COMMA         &kp DOT       &kp SLASH  &kp BACKSLASH
                                                      &none          &kp RALT     &hltk SYM ESC         &sk LSHFT   &hktk RSHFT ENTER    &hltk NUM SPACE          &backdel           &none
             >;
 
@@ -162,7 +162,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        /* &trans             &kp N1   &hrm LCTRL N2    &hrm LALT N3    &hrm LGUI N4            &kp N5                                              &kp N6      &hrm RGUI N7    &hrm LALT N8   &hrm RCTRL N9         &kp N0         &trans */
         number {
             bindings = <
 &trans             &trans          &trans          &trans          &trans            &trans                                              &trans            &trans          &trans          &trans         &trans         &trans
