@@ -123,7 +123,7 @@
         hltk: homerow_layers {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERS";
-            flavor = "balanced;
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <270>;
             #binding-cells = <2>;
@@ -144,7 +144,7 @@
   &kp TAB            &kp Q    &hrm LCTRL W     &hrm LALT E       &hrm LGUI R             &kp T                                                    &kp Y       &hrm RGUI U     &hrm LALT I    &hrm RCTRL O          &kp P      &kp MINUS
 &kp LCTRL      &hltk NAV A           &kp S           &kp D       &hltk NAV F             &kp G                                                    &kp H             &kp J           &kp K           &kp L       &kp SEMI        &kp SQT
 &kp LSHFT            &kp Z           &kp X           &kp C             &kp V             &kp B  &kp LEFT_BRACKET   &kp RIGHT_BRACKET              &kp N             &kp M       &kp COMMA         &kp DOT      &kp SLASH  &kp BACKSLASH
-                                                     inone          &kp RALT     &hltk SYM ESC         &sk LSHFT   &hktk RSHFT ENTER    &hltk NUM SPACE          &backdel           &none
+                                                     &none          &kp RALT     &hltk SYM ESC         &sk LSHFT   &hktk RSHFT ENTER    &hltk NUM SPACE          &backdel           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
