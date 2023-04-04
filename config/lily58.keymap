@@ -9,10 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NAV 1
-#define NUM 2
-#define SYM 3
-#define SPECIAL 4
+#define NUM 1
+#define SYM 2
+#define SPECIAL 3
 
 &sk {
     release-after-ms = <100>;
@@ -40,36 +39,6 @@
     };
 
     behaviors {
-        tk_hl: behavior_tk_hl_tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "tk_hl";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <150>;
-            bindings =
-                <&mo>,
-                <&kp>;
-        };
-        tk_hk: behavior_tk_hk_tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "tk_hk";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <150>;
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-        hk_tk: behavior_hk_kt_tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "hk_tk";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
         backdel: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DEL";
@@ -80,63 +49,15 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        hktk: hk_qtk {
+        hktk: hold_key_tap_key {
             compatible = "zmk,behavior-hold-tap";
-            label = "HK_QTK";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <270>;
+            label = "HOLD_KEY_TAP_KEY";
             flavor = "tap-preferred";
-            #binding-cells = <2>;
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-        hshift_tbsdel: hshift_tbsdel {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HSHIFT_TBSDEL";
-            bindings =
-                <&kp>,
-                <&backdel>;
-
-            flavor = "tap-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <270>;
-        };
-        hl_ttl: hl_ttl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HL_TTL";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            #binding-cells = <2>;
-            bindings =
-                <&mo>,
-                <&tog>;
-        };
-        hrm: left_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-
-            /* hold-trigger-key-positions = <6 18 31 30 44 43 54 55 56 45 46 57 47 48 49 35 23 11 9 34 22 10 21 32 33 20 8 7 19>; */
-            /* hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>; */
-
-            #binding-cells = <2>;
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-        hltk: homerow_layers {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             quick-tap-ms = <200>;
             #binding-cells = <2>;
             bindings =
-                <&mo>,
+                <&kp>,
                 <&kp>;
         };
     };
@@ -150,23 +71,11 @@
 
         default {
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                           &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0      &kp EQUAL
-  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                                  &kp Y         &kp U         &kp I         &kp O            &kp P      &kp MINUS
-  &kp ESC  &hrm LCTRL A   &hrm LALT S   &hrm LGUI D     &hltk 1 F         &kp G                                                  &kp H         &kp J   &hrm RGUI K   &hrm LALT L  &hrm RCTRL SEMI      &kp ENTER
-    &none         &kp Z         &kp X         &kp C         &kp V         &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET             &kp N         &kp M     &kp COMMA       &kp DOT        &kp SLASH  &kp BACKSLASH
-                                              &none         &sl 3         &sl 2         &sk LSHFT          &kp ENTER  &hktk RALT SPACE      &backdel         &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        navigation {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans       &trans     &trans   &trans   &trans
-&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6         &kp F7       &kp F8     &kp F9  &kp F10  &kp F12
- &trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &kp TAB   &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END   &trans   &trans
-                         &trans  &trans  &trans  &trans  &trans    &trans         &trans       &trans
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                            &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0      &kp EQUAL
+  &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                                   &kp Y         &kp U         &kp I         &kp O            &kp P      &kp MINUS
+  &kp ESC &hktk LCTRL A &hktk LSHFT S  &hktk LALT D  &hktk LGUI F         &kp G                                   &kp H  &hktk RGUI J  &hktk LALT K &hktk RSHFT L &hktk RCTRL SEMI      &kp ENTER
+    &none         &kp Z         &kp X         &kp C         &kp V         &kp B      &none      &none             &kp N         &kp M     &kp COMMA       &kp DOT        &kp SLASH  &kp BACKSLASH
+                                              &none         &sl 2         &sl 1  &sk LSHFT  &kp ENTER  &hktk RALT SPACE      &backdel         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -176,8 +85,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &kp TAB   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END   &trans   &trans
                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -199,8 +108,8 @@
         function {
             bindings = <
  &none         &none         &none         &none         &none       &none                   &none                   &none         &none         &none  &none  &none
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6         &kp F7       &kp F8     &kp F9  &kp F10  &kp F12
  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                   &none  &kp C_BACKLIGHT_TOGGLE  &kp C_BRI_DN  &kp C_BRI_UP  &none  &none
- &none         &none         &none         &none         &none       &none                   &none                   &none         &none         &none  &none  &none
 &trans         &none         &none         &none         &none       &none   &none   &none   &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none
                                           &trans        &trans      &trans  &trans  &trans  &trans                  &trans        &trans
             >;
