@@ -23,12 +23,6 @@
 };
 
 / {
-    combos {
-    };
-
-    macros {
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -71,10 +65,6 @@
                 <&mo>,
                 <&kp>;
         };
-    };
-
-    combos {
-        compatible = "zmk,combos";
     };
 
     keymap {
