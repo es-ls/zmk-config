@@ -76,7 +76,7 @@
 &none          &kp Q          &kp W         &kp E         &kp R  &kp T                               &kp Y         &kp U         &kp I          &kp O              &kp P  &none
 &none  &hktk LCTRL A  &hktk LSHFT S  &hktk LALT D  &hktk LGUI F  &kp G                               &kp H  &hktk RGUI J  &hktk LALT K  &hktk RSHFT L  &hktk LCTRL ENTER  &none
 &none          &kp Z          &kp X         &kp C         &kp V  &kp B      &none  &none             &kp N         &kp M     &kp COMMA        &kp DOT          &kp SLASH  &none
-                                            &none      &sk RALT  &sl 1  &sk LSHFT  &sl 2  &hktk RALT SPACE      &backdel         &none
+                                            &none      &sk RALT  &sl 1  &sk LSHFT  &sl 2  &hktk RALT SPACE        &trans         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -84,11 +84,11 @@
 
         number {
             bindings = <
-&trans             &trans             &trans     &trans     &trans         &trans                     &trans         &trans       &trans     &trans  &trans  &trans
-&trans             &kp N1             &kp N2     &kp N3     &kp N4         &kp N5                     &kp N6         &kp N7       &kp N8     &kp N9  &kp N0  &trans
-&trans  &hktk LCTRL LC(A)  &hktk LSHFT LC(S)     &trans     &trans         &trans                   &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &trans  &trans
-&trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(V))  &trans   &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END  &trans  &trans
-                                                 &trans     &trans         &trans  &trans  &kp TAB   &kp ESC        &kp DEL       &trans
+&trans             &trans             &trans     &trans     &trans         &trans                     &trans         &trans       &trans     &trans    &trans  &trans
+&trans             &kp N1             &kp N2     &kp N3     &kp N4         &kp N5                     &kp N6         &kp N7       &kp N8     &kp N9    &kp N0  &trans
+&trans  &hktk LCTRL LC(A)  &hktk LSHFT LC(S)     &trans     &trans        &kp DEL                   &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &kp BSPC  &trans
+&trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(V))  &trans   &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END    &trans  &trans
+                                                 &trans     &trans         &trans  &trans  &kp TAB   &kp ESC         &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
