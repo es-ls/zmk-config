@@ -84,11 +84,11 @@
 
         number {
             bindings = <
-&trans             &trans             &trans     &trans     &trans         &trans                     &trans         &trans       &trans     &trans    &trans  &trans
-&trans             &kp N1             &kp N2     &kp N3     &kp N4         &kp N5                     &kp N6         &kp N7       &kp N8     &kp N9    &kp N0  &trans
-&trans  &hktk LCTRL LC(A)  &hktk LSHFT LC(S)     &trans     &trans        &kp DEL                   &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &kp BSPC  &trans
-&trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(V))  &trans   &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END    &trans  &trans
-                                                 &trans     &trans         &trans  &trans  &kp TAB   &kp ESC         &trans       &trans
+&trans             &trans             &trans              &trans          &trans         &trans                    &trans         &trans       &trans     &trans    &trans  &trans
+&trans             &kp N1             &kp N2              &kp N3          &kp N4         &kp N5                    &kp N6         &kp N7       &kp N8     &kp N9    &kp N0  &trans
+&trans  &hktk LCTRL LC(A)  &hktk LSHFT LC(S)  &hktk LALT LS(TAB)  &hktk LGUI TAB        &kp DEL                  &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &kp BSPC  &trans
+&trans          &kp LC(Z)          &kp LC(X)           &kp LC(C)       &kp LC(V)  &kp LC(LS(V))  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END    &trans  &trans
+                                                          &trans          &trans         &trans  &trans  &trans   &kp ESC         &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,11 +96,11 @@
 
         symbol {
             bindings = <
-&trans     &trans    &trans     &trans      &trans       &trans                          &trans         &trans    &trans    &trans     &trans  &trans
-&trans   &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                       &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR   &kp RPAR  &trans
-&trans  &kp GRAVE   &kp DQT  &kp MINUS   &kp UNDER     &kp LBKT                        &kp RBKT      &kp EQUAL  &kp PLUS   &kp SQT   &kp SEMI  &trans
-&trans  &kp TILDE  &kp BSLH   &kp PIPE       &none     &kp LBRC  &trans       &trans   &kp RBRC      &kp COLON    &kp LT    &kp GT  &kp QMARK  &trans
-                                &trans      &trans       &trans  &trans  &kp LS(TAB)     &trans         &trans    &trans
+&trans     &trans    &trans     &trans      &trans       &trans                     &trans         &trans    &trans    &trans     &trans  &trans
+&trans   &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR   &kp RPAR  &trans
+&trans  &kp GRAVE   &kp DQT  &kp MINUS   &kp UNDER     &kp LBKT                   &kp RBKT      &kp EQUAL  &kp PLUS   &kp SQT   &kp SEMI  &trans
+&trans  &kp TILDE  &kp BSLH   &kp PIPE       &none     &kp LBRC  &trans  &trans   &kp RBRC      &kp COLON    &kp LT    &kp GT  &kp QMARK  &trans
+                                &trans      &trans       &trans  &trans  &trans     &trans         &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
