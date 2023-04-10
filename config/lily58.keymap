@@ -99,7 +99,7 @@
 &trans     &trans    &trans     &trans      &trans       &trans                     &trans         &trans    &trans    &trans     &trans  &trans
 &trans   &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR   &kp RPAR  &trans
 &trans  &kp GRAVE   &kp DQT  &kp MINUS   &kp UNDER     &kp LBKT                   &kp RBKT      &kp EQUAL  &kp PLUS   &kp SQT   &kp SEMI  &trans
-&trans  &kp TILDE  &kp BSLH   &kp PIPE       &none     &kp LBRC  &trans  &trans   &kp RBRC      &kp COLON    &kp LT    &kp GT  &kp QMARK  &trans
+&trans  &kp TILDE  &kp BSLH   &kp PIPE   &kp COLON     &kp LBRC  &trans  &trans   &kp RBRC          &none    &kp LT    &kp GT  &kp QMARK  &trans
                                 &trans      &trans       &trans  &trans  &trans     &trans         &trans    &trans
             >;
 
