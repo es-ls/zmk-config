@@ -96,11 +96,11 @@
 
         symbol {
             bindings = <
-&trans     &trans    &trans     &trans      &trans       &trans                     &trans         &trans    &trans    &trans     &trans  &trans
-&trans   &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR   &kp RPAR  &trans
-&trans  &kp GRAVE   &kp DQT  &kp MINUS   &kp UNDER     &kp LBKT                   &kp RBKT      &kp EQUAL  &kp PLUS   &kp SQT   &kp SEMI  &trans
-&trans  &kp TILDE  &kp BSLH   &kp PIPE   &kp COLON     &kp LBRC  &trans  &trans   &kp RBRC          &none    &kp LT    &kp GT  &kp QMARK  &trans
-                                &trans      &trans       &trans  &trans  &trans     &trans         &trans    &trans
+&trans     &trans     &trans     &trans      &trans       &trans                     &trans         &trans    &trans    &trans     &trans  &trans
+&trans   &kp EXCL     &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR   &kp RPAR  &trans
+&trans  &kp COLON    &kp DQT  &kp MINUS   &kp UNDER     &kp LBKT                   &kp RBKT      &kp EQUAL  &kp PLUS   &kp SQT   &kp SEMI  &trans
+&trans  &kp GRAVE  &kp TILDE   &kp BSLH    &kp PIPE     &kp LBRC  &trans  &trans   &kp RBRC          &none    &kp LT    &kp GT  &kp QMARK  &trans
+                                 &trans      &trans       &trans  &trans  &trans     &trans         &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
