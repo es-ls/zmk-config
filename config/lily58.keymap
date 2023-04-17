@@ -14,7 +14,7 @@
 #define SPECIAL 3
 
 &sk {
-    release-after-ms = <100>;
+    release-after-ms = <400>;
     quick-release;
 };
 
