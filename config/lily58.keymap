@@ -72,11 +72,11 @@
 
         default {
             bindings = <
-&none          &none  &none  &none  &none  &none                               &none   &none      &none    &none             &none  &none
-&none          &kp Q  &kp W  &kp E  &kp R  &kp T                               &kp Y   &kp U      &kp I    &kp O             &kp P  &none
-&none  &hktk LCTRL A  &kp S  &kp D  &kp F  &kp G                               &kp H   &kp J      &kp K    &kp L  &hktk RCTRL SEMI  &none
-&none          &kp Z  &kp X  &kp C  &kp V  &kp B      &none  &none             &kp N   &kp M  &kp COMMA  &kp DOT         &kp SLASH  &none
-                             &none  &sl 2  &sl 1  &sk LSHFT  &sl 2  &hktk RALT SPACE  &trans      &none
+&none          &none           &none         &none         &none  &none                               &none   &none      &none    &none              &none  &none
+&none          &kp Q           &kp W         &kp E         &kp R  &kp T                               &kp Y   &kp U      &kp I    &kp O              &kp P  &none
+&none          &kp A           &kp S         &kp D         &kp F  &kp G                               &kp H   &kp J      &kp K    &kp L           &kp SEMI  &none
+&none  &hktk LCTRL Z  &hktk LSHIFT X  &hktk LALT C  &hktk RALT V  &kp B      &none  &none             &kp N   &kp M  &kp COMMA  &kp DOT  &hktk RCTRL SLASH  &none
+                                             &none         &sl 2  &sl 1  &sk LSHFT  &sl 2  &hktk LGUI SPACE  &trans      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
