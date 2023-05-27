@@ -122,11 +122,11 @@
 
         mouse {
             bindings = <
- &none         &none         &none         &none         &none       &none                            &none         &none         &none          &none       &none  &none
- &none         &none         &none         &none         &none       &none                            &none         &none         &none          &none       &none  &none
- &none         &none         &none         &none         &none       &none                       &kp U_MS_L    &kp U_MS_D    &kp U_MS_U     &kp U_MS_R  &kp U_BTN1  &none
- &none        &trans         &none         &none         &none       &none   &none   &none   &kp LS(U_MS_D)    &kp U_WH_D    &kp U_WH_U &kp LS(U_WH_U)  &kp U_BTN2  &none
-                                          &trans        &trans      &trans  &trans  &trans           &trans        &trans        &trans
+ &none         &none         &none         &none         &none       &none                       &none         &none         &none          &none       &none  &none
+ &none         &none         &none         &none         &none       &none                       &none         &none         &none          &none       &none  &none
+ &none         &none         &none         &none         &none       &none                       U_MS_L        U_MS_D        U_MS_U        U_MS_R      U_BTN1  &none
+ &none        &trans         &none         &none         &none       &none   &none   &none       U_WH_L        U_WH_D        U_WH_U        U_WH_R      U_BTN2  &none
+                                          &trans        &trans      &trans  &trans  &trans       &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
