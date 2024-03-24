@@ -20,7 +20,6 @@
 &sl { release-after-ms = <100>; };
 
 / {
-
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     behaviors {
@@ -131,11 +130,11 @@
 
         default {
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                       &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
-&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T                                              &kp Y         &kp U          &kp I         &kp O         &kp P         &kp MINUS
-&kp LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G                                              &kp H         &kp J          &kp K         &kp L         &kp SEMI      &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N         &kp M          &kp COMMA     &kp DOT       &kp SLASH     &kp BACKSLASH
-                                       &kp LGUI      &kp LEFT_ALT  &mo 1         &sk LSHFT         &kp DELETE         &kp SPACE     &kp RIGHT_ALT  &mo 2
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
+&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T                                              &kp Y         &kp U         &kp I          &kp O         &kp P         &kp MINUS
+&kp LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G                                              &kp H         &kp J         &kp K          &kp L         &kp SEMI      &kp SQT
+&kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N         &kp M         &kp COMMA      &kp DOT       &kp SLASH     &kp BACKSLASH
+                                       &kp LEFT_ALT  &kp LGUI      &mo 1         &kp LSHIFT        &kp RSHIFT         &kp SPACE     &backdel      &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -143,11 +142,11 @@
 
         navigation {
             bindings = <
-&kp ESC  &kp F1   &kp F2    &kp F3    &kp F4     &kp F5                         &kp F6  &kp F7    &kp F8         &kp F9  &kp F10    &kp F11
-&none    &none    &none     &kp UP    &none      &none                          &none   &kp HOME  &kp PAGE_DOWN  &none   &none      &kp F12
-&none    &kp ESC  &kp LEFT  &kp DOWN  &kp RIGHT  &none                          &none   &kp END   &kp PAGE_DOWN  &none   &kp ENTER  &none
-&trans   &none    &none     &none     &none      &none   &none   &none          &none   &none     &none          &none   &none      &none
-                            &trans    &trans     &trans  &trans  &kp BACKSPACE  &mo 2   &trans    &trans
+&kp ESC  &kp F1   &kp F2    &kp F3    &kp F4     &kp F5                  &kp F6  &kp F7      &kp F8         &kp F9  &kp F10    &kp F11
+&none    &none    &none     &kp UP    &none      &none                   &none   &kp HOME    &kp PAGE_DOWN  &none   &none      &kp F12
+&none    &kp ESC  &kp LEFT  &kp DOWN  &kp RIGHT  &none                   &none   &kp END     &kp PAGE_DOWN  &none   &kp ENTER  &none
+&trans   &none    &none     &none     &none      &none   &none   &none   &none   &none       &none          &none   &none      &none
+                            &trans    &trans     &trans  &trans  &trans  &mo 2   &kp DELETE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
