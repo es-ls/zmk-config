@@ -151,11 +151,11 @@
 
         navigation {
             bindings = <
-&kp ESC  &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                  &kp F6  &kp F7      &kp F8         &kp F9  &kp F10    &kp F11
-&none    &none   &none     &kp UP    &none      &none                   &none   &kp HOME    &kp PAGE_UP    &none   &none      &kp F12
-&none    &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none                   &none   &kp END     &kp PAGE_DOWN  &none   &kp ENTER  &none
-&trans   &none   &none     &none     &none      &none   &none   &none   &none   &none       &none          &none   &none      &none
-                           &trans    &trans     &trans  &trans  &trans  &mo 2   &kp DELETE  &trans
+&kp ESC     &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                  &kp F6  &kp F7      &kp F8         &kp F9  &kp F10    &kp F11
+&kp INSERT  &none   &none     &kp UP    &none      &none                   &none   &kp HOME    &kp PAGE_UP    &none   &none      &kp F12
+&none       &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none                   &none   &kp END     &kp PAGE_DOWN  &none   &kp ENTER  &none
+&trans      &none   &none     &none     &none      &none   &none   &none   &none   &none       &none          &none   &none      &none
+                              &trans    &trans     &trans  &trans  &trans  &mo 2   &kp DELETE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
